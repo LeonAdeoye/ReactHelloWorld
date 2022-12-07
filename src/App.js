@@ -3,6 +3,7 @@ import Greet from '../../reacthelloworld/src/components/Greet'
 import AnotherNameForGreetES6 from '../../reacthelloworld/src/components/GreetES6'
 import { GreetWithoutExport } from '../../reacthelloworld/src/components/GreetWithoutExport'
 import GreetClassComponent from "./components/GreetClassComponent";
+import GreetWithChildren from "./components/GreetWithChild";
 
 function App()
 {
@@ -11,7 +12,10 @@ function App()
         <Greet name="Horatio"/>
         <AnotherNameForGreetES6 name="Harper"/>
         <GreetWithoutExport/>
-        <GreetClassComponent/>
+        <GreetClassComponent name="Saori Yamaguchi"/>
+        <GreetWithChildren name="Isaac">
+          <button>Action</button>
+        </GreetWithChildren>
       </div>
   );
 }

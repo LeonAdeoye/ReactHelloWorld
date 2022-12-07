@@ -4,7 +4,8 @@ class GreetClassComponent extends Component
 {
     render()
     {
-        return <h1>Hello Leon</h1>
+        /* props are readonly and immutable - once set they cannot be re-assigned */
+        return <h1>Hello {this.props.name}</h1>
     }
 }
 
