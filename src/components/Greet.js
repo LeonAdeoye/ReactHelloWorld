@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Greet()
+function Greet(props)
 {
-    return <h1>Hello Harper</h1>
+    return <h1>Hello {props.name}</h1>
 }
 
 export default Greet;

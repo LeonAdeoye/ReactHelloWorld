@@ -4,11 +4,12 @@ import AnotherNameForGreetES6 from '../../reacthelloworld/src/components/GreetES
 import { GreetWithoutExport } from '../../reacthelloworld/src/components/GreetWithoutExport'
 import GreetClassComponent from "./components/GreetClassComponent";
 
-function App() {
+function App()
+{
   return (
       <div className="App">
-        <Greet/>
-        <AnotherNameForGreetES6/>
+        <Greet name="Horatio"/>
+        <AnotherNameForGreetES6 name="Harper"/>
         <GreetWithoutExport/>
         <GreetClassComponent/>
       </div>

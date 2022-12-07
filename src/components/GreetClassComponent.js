@@ -2,7 +2,8 @@ import React, {Component} from "react";
 
 class GreetClassComponent extends Component
 {
-    render() {
+    render()
+    {
         return <h1>Hello Leon</h1>
     }
 }

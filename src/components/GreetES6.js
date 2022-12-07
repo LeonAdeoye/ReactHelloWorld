@@ -1,5 +1,5 @@
 import React from 'react';
 
-const GreetES6 = () => <h1>Hello Horatio</h1>;
+const GreetES6 = (props) => <h1>Hello {props.name}</h1>;
 
 export default GreetES6;
