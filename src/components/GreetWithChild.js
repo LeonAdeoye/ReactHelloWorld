@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GreetWithChildren = (props) => {
+const GreetWithChild = (props) => {
     return (
         /* JSX needs to wrapped in a single div because we can only return one HTML element. */
         /* props are readonly and immutable - once set they cannot be re-assigned */
@@ -11,4 +11,4 @@ const GreetWithChildren = (props) => {
         </div>);
 }
 
-export default GreetWithChildren;
+export default GreetWithChild;
