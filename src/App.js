@@ -6,6 +6,7 @@ import GreetClassComponent from "./components/GreetClassComponent";
 import GreetWithChild from "./components/GreetWithChild";
 import Message from "./components/Message";
 import Counter from "./components/Counter";
+import GreetWithDestructor from "./components/GreetWithDestructor";
 
 function App()
 {
@@ -19,7 +20,8 @@ function App()
           <button>Action</button>
         </GreetWithChild>
         <Message/>
-          <Counter/>
+        <GreetWithDestructor name="Bruce Wayne" heroName = "Batman"/>
+        <Counter/>
       </div>
   );
 }

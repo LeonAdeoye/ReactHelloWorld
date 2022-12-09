@@ -12,13 +12,26 @@ class Counter extends  Component
 
     increment()
     {
-        // The only way to set state after it is set in the constructor is to use the setState.
-        // Calls to setState are asynchronous. Anything following is being called before the state is being set.
+        // The only way to set state after it has been set in the constructor is to use the setState. State cannot be modified directly.
+        // Calls to setState are asynchronous. Anything following setState is being called before the state is being set.
         // To execute some code after the state has been updated, you can pass in a callback function as a second argument to the setState method.
-        this.setState({ count : this.state.count + 1 },() =>
+        // React may group multiple set state calls in one go and give you unpredictable results so use the below syntax with previous state to make each state change unique.
+        this.setState((previousState) => ({
+            count: previousState.count + 1
+        }), () =>
         {
-            console.log("In setState callback the state is now: " + this.state.count);
+            console.log("In the setState callback the state is now: " + this.state.count);
         });
+    }
+
+    // React may group multiple set state calls in one go and give you unpredictable results so use the below syntax with previous state to make each state change unique.
+    incrementByFive()
+    {
+        this.increment();
+        this.increment();
+        this.increment();
+        this.increment();
+        this.increment();
     }
 
     render()
@@ -27,6 +40,7 @@ class Counter extends  Component
             <div>
                 Count = {this.state.count}
                 <button onClick={() => this.increment()}>Increment</button>
+                <button onClick={() => this.incrementByFive()}>IncrementByFive</button>
             </div>
         );
     }
