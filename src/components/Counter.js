@@ -8,6 +8,8 @@ class Counter extends  Component
         this.state = {
             count: 0
         }
+
+        this.incrementBy100 = this.incrementBy100.bind(this);
     }
 
     increment()
@@ -34,13 +36,31 @@ class Counter extends  Component
         this.increment();
     }
 
+    incrementBy100()
+    {
+        for(let i = 0; i < 100; ++i)
+        this.increment();
+    }
+
+    incrementBy1000 = () => {
+        for(let i = 0; i < 1000; ++i)
+            this.increment();
+    }
+
     render()
     {
+        // Four different ways to bind events in react.
+        // With onClick={this.incrementByFive} THIS is undefined ergo you have to bind the THIS reference.
+        // The first two methods have various performance drawbacks in large application.
+        // The third is the most efficient because the binding happens once in the constructor.
+        // The forth approach is relatively new approach.
         return (
             <div>
                 Count = {this.state.count}
                 <button onClick={() => this.increment()}>Increment</button>
-                <button onClick={() => this.incrementByFive()}>IncrementByFive</button>
+                <button onClick={this.incrementByFive.bind(this)}>IncrementByFive</button>
+                <button onClick={this.incrementBy100}>IncrementBy100</button>
+                <button onClick={this.incrementBy1000}>IncrementBy1000</button>
             </div>
         );
     }
