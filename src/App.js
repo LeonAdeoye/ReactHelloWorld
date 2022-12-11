@@ -8,11 +8,13 @@ import Message from "./components/Message";
 import CounterWithDiffEventHandlerBindings from "./components/CounterWithDiffEventHandlerBindings";
 import GreetWithDestructor from "./components/GreetWithDestructor";
 import ParentComponent from "./components/ParentComponent";
+import UserGreeting from "./components/UserGreeting";
 
 function App()
 {
   return (
       <div className="App">
+        <UserGreeting/>
         <ParentComponent/>
         <Greet name="Horatio"/>
         <AnotherNameForGreetES6 name="Harper"/>
