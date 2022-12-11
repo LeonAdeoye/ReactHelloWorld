@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class UserGreeting extends Component
+class UserGreetingConditionalRendering extends Component
 {
     constructor(props)
     {
@@ -9,7 +9,7 @@ class UserGreeting extends Component
         {
             isLoggedIn: false,
             isChristmas: true,
-            isAlive: false
+            isAlive: true
         }
     }
 
@@ -26,7 +26,7 @@ class UserGreeting extends Component
         {
             nameOfPerson = "Guest"
         }
-        // if else do not work with JSX - they are invalid and must be placed outside.
+        // If else do not work with JSX - they are invalid and must be placed outside.
         if(this.state.isLoggedIn)
         {
             // Conditional rendering using a ternary operator.
@@ -40,4 +40,4 @@ class UserGreeting extends Component
     }
 }
 
-export default UserGreeting;
+export default UserGreetingConditionalRendering;

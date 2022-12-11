@@ -8,7 +8,7 @@ class CounterWithDiffEventHandlerBindings extends  Component
         this.state = {
             count: 0
         }
-
+        // this binding happens in constructor - React recommended.
         this.incrementBy100 = this.incrementBy100.bind(this);
     }
 

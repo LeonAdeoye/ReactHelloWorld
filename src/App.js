@@ -8,13 +8,17 @@ import Message from "./components/Message";
 import CounterWithDiffEventHandlerBindings from "./components/CounterWithDiffEventHandlerBindings";
 import GreetWithDestructor from "./components/GreetWithDestructor";
 import ParentComponent from "./components/ParentComponent";
-import UserGreeting from "./components/UserGreeting";
+import UserGreetingConditionalRendering from "./components/UserGreetingConditionalRendering";
+import NameList from "./components/NameList";
+import PersonList from "./components/PersonList";
 
 function App()
 {
   return (
       <div className="App">
-        <UserGreeting/>
+        <PersonList/>
+        <NameList/>
+        <UserGreetingConditionalRendering/>
         <ParentComponent/>
         <Greet name="Horatio"/>
         <AnotherNameForGreetES6 name="Harper"/>
