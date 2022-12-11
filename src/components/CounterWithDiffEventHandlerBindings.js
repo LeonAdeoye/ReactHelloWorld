@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-class Counter extends  Component
+class CounterWithDiffEventHandlerBindings extends  Component
 {
     constructor(props)
     {
@@ -49,11 +49,11 @@ class Counter extends  Component
 
     render()
     {
-        // Four different ways to bind events in react.
+        // Four different ways to bind event handlers in React.
         // With onClick={this.incrementByFive} THIS is undefined ergo you have to bind the THIS reference.
-        // The first two methods have various performance drawbacks in large application.
-        // The third is the most efficient because the binding happens once in the constructor.
-        // The forth approach is relatively new approach.
+        // The first two methods have various performance drawbacks in large applications.
+        // The third is the most efficient and React recommended because the binding happens once in the constructor.
+        // The forth approach is syntactically a relatively new approach but is also efficient.
         return (
             <div>
                 Count = {this.state.count}
@@ -66,4 +66,4 @@ class Counter extends  Component
     }
 }
 
-export default Counter;
+export default CounterWithDiffEventHandlerBindings;

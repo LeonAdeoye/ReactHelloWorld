@@ -5,7 +5,7 @@ import { GreetWithoutExport } from '../../reacthelloworld/src/components/GreetWi
 import GreetClassComponent from "./components/GreetClassComponent";
 import GreetWithChild from "./components/GreetWithChild";
 import Message from "./components/Message";
-import Counter from "./components/Counter";
+import CounterWithDiffEventHandlerBindings from "./components/CounterWithDiffEventHandlerBindings";
 import GreetWithDestructor from "./components/GreetWithDestructor";
 
 function App()
@@ -21,7 +21,7 @@ function App()
         </GreetWithChild>
         <Message/>
         <GreetWithDestructor name="Bruce Wayne" heroName = "Batman"/>
-        <Counter/>
+        <CounterWithDiffEventHandlerBindings/>
       </div>
   );
 }
