@@ -13,11 +13,15 @@ import NameList from "./components/NameList";
 import PersonList from "./components/PersonList";
 import StyleSheet from "./components/StyleSheet";
 import Inline from "./components/Inline";
+import './appStyles.css'
+import style from './appStyles.module.css' // CSS Module style sheets only apply to parent and do not pass on CSS styles to children.
 
 function App()
 {
   return (
       <div className="App">
+        <h1 className='error'>Error</h1>
+        <h1 className={style.success}>Success</h1>
         <StyleSheet primary={true}/>
         <Inline/>
         <PersonList/>
