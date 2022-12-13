@@ -19,7 +19,7 @@ function PersonList()
         likes: "sweets"
     }];
 
-    // You need to unique key property otherwise you will get a warning: Each child in a list should have a unique "key" prop.
+    // You need to provide a unique key property otherwise you will get a warning: Each child in a list should have a unique "key" prop.
     return persons.map(person => <PersonComponent key={person.id} personDetails={person}/>)
 }
 
