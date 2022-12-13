@@ -11,11 +11,15 @@ import ParentComponent from "./components/ParentComponent";
 import UserGreetingConditionalRendering from "./components/UserGreetingConditionalRendering";
 import NameList from "./components/NameList";
 import PersonList from "./components/PersonList";
+import StyleSheet from "./components/StyleSheet";
+import Inline from "./components/Inline";
 
 function App()
 {
   return (
       <div className="App">
+        <StyleSheet primary={true}/>
+        <Inline/>
         <PersonList/>
         <NameList/>
         <UserGreetingConditionalRendering/>
