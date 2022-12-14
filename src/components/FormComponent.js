@@ -35,7 +35,7 @@ class FormComponent extends Component
 
     render()
     {
-        // destruct values from the state
+        // destruct values from this.state
         const {userName, comment, topic} = this.state
         return (
             <form onSubmit={this.handleSubmit}>
