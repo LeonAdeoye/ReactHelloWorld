@@ -17,6 +17,7 @@ import './appStyles.css'
 import style from './appStyles.module.css'
 import FormComponent from "./components/FormComponent";
 import LifecycleA from "./components/LifecycleA";
+import Table from "./components/Table";
 
 // CSS Module style sheets only apply to parent and do not pass on CSS styles to children.
 // They are locally scoped by default, and can avoid CSS conflicts.
@@ -25,6 +26,7 @@ function App()
 {
   return (
       <div className="App">
+        <Table/>
         <LifecycleA/>
         <FormComponent/>
         <h1 className='error'>Error</h1>
