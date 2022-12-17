@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import RegularComp from "./RegularComp";
 import PureComp from "./PureComp";
+import MemoComponent from "./MemoComponent";
 
 class ParentCompOfPure extends Component
 {
@@ -27,6 +28,7 @@ class ParentCompOfPure extends Component
                 <h2>Parent Component</h2>
                 <RegularComp name = {this.state.name}/>
                 <PureComp name = {this.state.name}/>
+                <MemoComponent name = {this.state.name}/>
             </div>
         );
     }
