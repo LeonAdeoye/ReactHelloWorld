@@ -20,14 +20,17 @@ import LifecycleA from "./components/LifecycleA";
 import Table from "./components/Table";
 import ParentCompOfPure from "./components/ParentCompOfPure";
 import RefsDemo from "./components/RefsDemo";
+import FocusInputParentComponent from "./components/FocusInputParentComponent";
+import PortalDemo from "./components/PortalDemo";
 
 // CSS Module style sheets only apply to parent and do not pass on CSS styles to children.
 // They are locally scoped by default, and can avoid CSS conflicts.
-
 function App()
 {
   return (
       <div className="App">
+        <PortalDemo/>
+        <FocusInputParentComponent/>
         <RefsDemo/>
         <ParentCompOfPure/>
         <Table/>

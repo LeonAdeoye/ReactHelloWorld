@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 // Refs make it possible to access DOM nodes directly in React.
 // For example if you have a login form with an input field, and if you want the input field to have focus immediately then you would use Refs.
+// Refs can only be attached to class components. They cannot be attached to functional components.
 class RefsDemo extends Component
 {
     constructor(props)
