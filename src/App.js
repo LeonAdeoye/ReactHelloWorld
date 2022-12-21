@@ -24,6 +24,8 @@ import FocusInputParentComponent from "./components/FocusInputParentComponent";
 import PortalDemo from "./components/PortalDemo";
 import Hero from "./components/Hero";
 import ErrorBoundary from "./components/ErrorBoundary";
+import ClickCounter from "./components/ClickCounter";
+import HoverCounter from "./components/HoverCounter";
 
 // CSS Module style sheets only apply to parent and do not pass on CSS styles to children.
 // They are locally scoped by default, and can avoid CSS conflicts.
@@ -31,6 +33,8 @@ function App()
 {
   return (
       <div className="App">
+        <ClickCounter/>
+        <HoverCounter/>
         <ErrorBoundary>
            <Hero heroName="Superman"/>
         </ErrorBoundary>
