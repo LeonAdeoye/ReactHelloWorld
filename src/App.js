@@ -22,6 +22,8 @@ import ParentCompOfPure from "./components/ParentCompOfPure";
 import RefsDemo from "./components/RefsDemo";
 import FocusInputParentComponent from "./components/FocusInputParentComponent";
 import PortalDemo from "./components/PortalDemo";
+import Hero from "./components/Hero";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 // CSS Module style sheets only apply to parent and do not pass on CSS styles to children.
 // They are locally scoped by default, and can avoid CSS conflicts.
@@ -29,6 +31,12 @@ function App()
 {
   return (
       <div className="App">
+        <ErrorBoundary>
+           <Hero heroName="Superman"/>
+        </ErrorBoundary>
+        <ErrorBoundary>
+           <Hero heroName="Joker"/>
+        </ErrorBoundary>
         <PortalDemo/>
         <FocusInputParentComponent/>
         <RefsDemo/>
