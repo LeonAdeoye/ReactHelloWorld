@@ -1,9 +1,11 @@
 import React from 'react'
 
 // Higher Order Component (HOC) is a pattern where a function takes a component as an argument and returns a new component.
-const UpdatedComponent = (OriginalComponent) =>
+// Allows you to share common functionality between components without having to repeat the code.
+// Naming convention of HOCs is important. See below.
+const withCounter = (WrappedComponent) =>
 {
-    class NewComponent extends React.Component
+    class WithCounter extends React.Component
     {
         constructor(props)
         {
@@ -24,10 +26,10 @@ const UpdatedComponent = (OriginalComponent) =>
 
         render()
         {
-            return <OriginalComponent name='Horatio' count={this.state.count} incrementCount={this.incrementCount}/>
+            return <WrappedComponent name='Horatio' count={this.state.count} incrementCount={this.incrementCount}/>
         }
     }
-    return NewComponent
+    return WithCounter
 }
 
-export default UpdatedComponent
+export default withCounter
