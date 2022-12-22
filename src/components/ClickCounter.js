@@ -8,10 +8,11 @@ class ClickCounter extends Component
         const { count, incrementCount } = this.props
         return (
             <div>
-                <button onClick={incrementCount}>clicked {count} times</button>
+                <button onClick={incrementCount}>{this.props.name} clicked {count} times</button>
             </div>
         );
     }
 }
 
-export default withCounter(ClickCounter);
+// Passing an increment number of 5 as a parameter to the HOC function.
+export default withCounter(ClickCounter, 5);

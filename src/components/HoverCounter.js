@@ -8,10 +8,10 @@ class HoverCounter extends Component
         const { count, incrementCount } = this.props
         return (
             <div>
-                <button onMouseOver={incrementCount}>Hovered {count} times</button>
+                <button onMouseOver={incrementCount}>{this.props.name} hovered {count} times</button>
             </div>
         );
     }
 }
-
-export default withCounter(HoverCounter);
+// Passing an increment number of 10 as a parameter to the HOC function.
+export default withCounter(HoverCounter, 10);

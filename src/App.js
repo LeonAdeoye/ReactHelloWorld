@@ -33,8 +33,8 @@ function App()
 {
   return (
       <div className="App">
-        <ClickCounter/>
-        <HoverCounter/>
+        <ClickCounter name="Horatio"/>
+        <HoverCounter name="Harper"/>
         <ErrorBoundary>
            <Hero heroName="Superman"/>
         </ErrorBoundary>
