@@ -3,12 +3,6 @@ import './myStyles.css'
 
 class StyleSheet extends Component
 {
-    constructor(props)
-    {
-        super(props);
-
-    }
-
     // Use a backtick to apply template font-xl literal to the styling.
     render()
     {
