@@ -29,6 +29,8 @@ import HoverCounter from "./components/HoverCounter";
 import User from "./components/User";
 import Counter from "./components/Counter";
 import ClickCounterWithRenderProps from "./components/ClickCounterWithRenderProps";
+import ComponentA from "./components/ComponentA";
+import { UserProvider } from "./components/UserContext";
 
 // CSS Module style sheets only apply to parent and do not pass on CSS styles to children.
 // They are locally scoped by default, and can avoid CSS conflicts.
@@ -36,6 +38,9 @@ function App()
 {
   return (
       <div className="App">
+        <UserProvider value="Horatio">
+            <ComponentA/>
+        </UserProvider>
         <Counter render={ (count, incrementCount) => (<ClickCounterWithRenderProps count={count} incrementCount={incrementCount}/>)}/>
         <User render={(isLoggedIn) => isLoggedIn ? 'Harper' : 'Guest'}/>
         <ClickCounter name="Horatio"/>
