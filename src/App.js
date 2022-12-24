@@ -33,6 +33,7 @@ import ComponentA from "./components/ComponentA";
 import { UserProvider } from "./components/UserContext";
 import PostList from "./components/PostList";
 import PostForm from "./components/PostForm";
+import HookCounter from "./components/HookCounter";
 
 // CSS Module style sheets only apply to parent and do not pass on CSS styles to children.
 // They are locally scoped by default, and can avoid CSS conflicts.
@@ -40,6 +41,7 @@ function App()
 {
   return (
       <div className="App">
+        <HookCounter/>
         <PostForm/>
         <PostList/>
         <UserProvider value="Horatio">
