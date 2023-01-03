@@ -1,5 +1,8 @@
 import React, {useState} from 'react';
 
+// The setter function provided by the useState hook does not automatically merge and update objects.
+// You have to manually merge by yourself using the ES6 spread operator ...
+// [...name] - copy every property in the name object, and only update the first or last name property.
 function HookCounterWithObject()
 {
     const [name, setName] = useState({firstName: '', lastName: ''})
