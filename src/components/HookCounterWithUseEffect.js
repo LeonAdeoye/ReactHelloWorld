@@ -8,9 +8,10 @@ function HookCounterWithUseEffect()
     const [count, setCount] = useState(0)
     const [name, setName] = useState('')
 
-    // In order to conditionally executing an effect, you need to pass in a second array parameter of the useEffect hook method.
-    // Within this array, we need to specify either props or state that we need to watch for.
-    // Only when these were to change, the effect will be executed. In this case, we only want the document title to change when the count state changes.
+    // In order to conditionally executing an effect, you need to pass in a second dependency array parameter of the useEffect hook method.
+    // Within this dependency array, we need to specify either props or state that we need to watch for.
+    // Only when these array elements were to change, the effect will be executed.
+    // In this case, we only want the document title to change when the count state changes.
     useEffect(() => {
         document.title = `Clicked ${count} times`
     },[count])

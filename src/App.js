@@ -38,6 +38,7 @@ import HookCounterAdvanced from "./components/hookCounterAdvanced";
 import HookCounterWithObject from "./components/HookCounterWithObject";
 import HookCounterWithArray from "./components/HookCounterWithArray";
 import HookCounterWithUseEffect from "./components/HookCounterWithUseEffect";
+import HookMouse from "./components/HookMouse";
 
 // CSS Module style sheets only apply to parent and do not pass on CSS styles to children.
 // They are locally scoped by default, and can avoid CSS conflicts.
@@ -45,6 +46,7 @@ function App()
 {
   return (
       <div className="App">
+        <HookMouse/>
         <HookCounterWithUseEffect/>
         <HookCounterWithArray/>
         <HookCounterWithObject/>
