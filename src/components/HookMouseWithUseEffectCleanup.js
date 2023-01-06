@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 
-function HookMouse()
+function HookMouseWithUseEffectCleanup()
 {
     const [x, setX] = useState(0)
     const [y, setY] = useState(0)
@@ -14,6 +14,11 @@ function HookMouse()
     // To do that we provide an empty dependency array argument - this effect does not depend on any props or state.
     useEffect(() => {
         window.addEventListener('mousemove', logMousePosition)
+        // The function that is passed into the useEffect hook method can return another function that will be
+        // executed when a component unmounts and can be used for cleanup. In the case below we need to remove the event listener.
+        return () => {
+            window.removeEventListener('mousemove', logMousePosition)
+        }
     },[])
 
     return (
@@ -21,4 +26,4 @@ function HookMouse()
     );
 }
 
-export default HookMouse;
+export default HookMouseWithUseEffectCleanup;
