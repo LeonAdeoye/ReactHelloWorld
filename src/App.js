@@ -42,6 +42,7 @@ import HookMouseWithUseEffectCleanup from "./components/HookMouseWithUseEffectCl
 import MouseContainer from "./components/MouseContainer";
 import IntervalClassCounter from "./components/IntervalClassCounter";
 import IntervalHookCounter from "./components/IntervalHookCounter";
+import DataFetchingFunctionalComponent from "./components/DataFetchingFunctionalComponent";
 
 // CSS Module style sheets only apply to parent and do not pass on CSS styles to children.
 // They are locally scoped by default, and can avoid CSS conflicts.
@@ -49,6 +50,7 @@ function App()
 {
   return (
       <div className="App">
+        <DataFetchingFunctionalComponent/>
         <IntervalHookCounter/>
         <IntervalClassCounter/>
         <MouseContainer/>
