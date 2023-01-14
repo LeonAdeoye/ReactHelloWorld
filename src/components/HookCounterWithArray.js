@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-// Using the spread operator to copy previous array in the setter state function
+// Using the spread operator to copy previous array in the setItems setter (returned by the useState function).
 function HookCounterWithArray()
 {
     const [items, setItems] = useState([])
