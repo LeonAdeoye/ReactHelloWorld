@@ -9,7 +9,7 @@ const heading = {
 
 function Inline()
 {
-    // To apply this style inline we make use of the style attribute which is set the above object heading.
+    // To apply this style inline we make use of the style attribute which is set to the object heading.
     return (
         <div>
             <h1 style={heading}>Inline</h1>
