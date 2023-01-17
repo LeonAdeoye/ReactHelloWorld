@@ -5,7 +5,7 @@ import FormComponent from "../components/FormComponent";
 
 describe("renders correctly", () =>
 {
-    test("Username", () =>
+    test("Username textbox", () =>
     {
         render(<FormComponent/>);
         const userNameElement = screen.getByRole("textbox", {
@@ -14,16 +14,16 @@ describe("renders correctly", () =>
         expect(userNameElement).toBeInTheDocument();
     })
 
-    test("Comment", () =>
+    test("Comment textbox", () =>
     {
+        // Alternative to using getByRole
         render(<FormComponent/>);
-        const userName = screen.getByRole("textbox", {
-            name: "Comment"
-        });
+        // Searches for the element (the input textbox) that is associated wih the label with text Comment
+        const userName = screen.getByLabelText("Comment");
         expect(userName).toBeInTheDocument();
     })
 
-    test("Topic", () =>
+    test("Topic Combobox", () =>
     {
         render(<FormComponent/>);
         const userName = screen.getByRole("combobox", {
@@ -32,7 +32,34 @@ describe("renders correctly", () =>
         expect(userName).toBeInTheDocument();
     })
 
-    test("Submit", () =>
+    test("React Option", () =>
+    {
+        render(<FormComponent/>);
+        const userName = screen.getByRole("option", {
+            name: "React"
+        });
+        expect(userName).toBeInTheDocument();
+    })
+
+    test("Angular Option", () =>
+    {
+        render(<FormComponent/>);
+        const userName = screen.getByRole("option", {
+            name: "Angular"
+        });
+        expect(userName).toBeInTheDocument();
+    })
+
+    test("Blazor Option", () =>
+    {
+        render(<FormComponent/>);
+        const userName = screen.getByRole("option", {
+            name: "Blazor"
+        });
+        expect(userName).toBeInTheDocument();
+    })
+
+    test("Submit Button", () =>
     {
         render(<FormComponent/>);
         const userName = screen.getByRole("button", {
