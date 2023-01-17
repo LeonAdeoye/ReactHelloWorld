@@ -40,18 +40,18 @@ class FormComponent extends Component
         return (
             <form onSubmit={this.handleSubmit}>
                 <div>
-                    <label>Username:</label>
-                    <input type='text' value={userName} onChange={this.handleUsernameChange}/>
+                    <label>Username</label>
+                    <input type='text' aria-label="Username" value={userName} onChange={this.handleUsernameChange}/>
                     <h2>{userName}</h2>
                 </div>
                 <div>
-                    <label>Comment:</label>
-                    <textarea value={comment} onChange={this.handleCommentChange}/>
+                    <label>Comment</label>
+                    <textarea value={comment} aria-label="Comment" onChange={this.handleCommentChange}/>
                     <h2>{comment}</h2>
                 </div>
                 <div>
-                    <label>Topic:</label>
-                    <select value={topic} onChange={this.handleTopicChange}>
+                    <label>Topic</label>
+                    <select value={topic} aria-label="Topic" onChange={this.handleTopicChange}>
                         <option value="react">React</option>
                         <option value="angular">Angular</option>
                         <option value="blazor">Blazor</option>
