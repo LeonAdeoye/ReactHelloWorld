@@ -1,5 +1,6 @@
 import {render, screen} from "@testing-library/react";
 import FormComponent from "../components/FormComponent";
+import NameList from "../components/NameList";
 
 // Navigate here to see a list of HTML elements and the corresponding roles for the getByRole method: https://www.w3.org/TR/html-aria/#docconformance
 
@@ -32,7 +33,7 @@ describe("renders correctly", () =>
         expect(userName).toBeInTheDocument();
     })
 
-    test("React Option", () =>
+    test("React option", () =>
     {
         render(<FormComponent/>);
         const userName = screen.getByRole("option", {
@@ -41,7 +42,7 @@ describe("renders correctly", () =>
         expect(userName).toBeInTheDocument();
     })
 
-    test("Angular Option", () =>
+    test("Angular option", () =>
     {
         render(<FormComponent/>);
         const userName = screen.getByRole("option", {
@@ -50,7 +51,7 @@ describe("renders correctly", () =>
         expect(userName).toBeInTheDocument();
     })
 
-    test("Blazor Option", () =>
+    test("Blazor option", () =>
     {
         render(<FormComponent/>);
         const userName = screen.getByRole("option", {
@@ -66,7 +67,7 @@ describe("renders correctly", () =>
         expect(spanElement).toBeInTheDocument();
     })
 
-    test("Submit Button", () =>
+    test("Submit button", () =>
     {
         render(<FormComponent/>);
         const userName = screen.getByRole("button", {

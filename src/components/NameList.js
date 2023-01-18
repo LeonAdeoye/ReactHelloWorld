@@ -9,11 +9,11 @@ function NameList()
     // However, insert at the start of the array will shift the elements up and the last element have an undefined/blank values. Sorting is also impacted.
     // Use the default index key if the list is static and will not be reordered.
     return (
-        <div>
+        <ul>
             {
-                names.map((name, index) => <h2 key={index}>{name} at {index}</h2>)
+                names.map((name, index) => <li key={index}>{name} at {index}</li>)
             }
-        </div>
+        </ul>
     );
 }
 
