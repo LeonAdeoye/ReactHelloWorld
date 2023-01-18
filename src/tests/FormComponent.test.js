@@ -59,6 +59,13 @@ describe("renders correctly", () =>
         expect(userName).toBeInTheDocument();
     })
 
+    test("Span warning", () =>
+    {
+        render(<FormComponent/>);
+        const spanElement = screen.getByText("All fields are mandatory.");
+        expect(spanElement).toBeInTheDocument();
+    })
+
     test("Submit Button", () =>
     {
         render(<FormComponent/>);

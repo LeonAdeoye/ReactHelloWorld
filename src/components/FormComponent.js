@@ -58,6 +58,7 @@ class FormComponent extends Component
                     </select>
                     <h2>{topic}</h2>
                 </div>
+                <span>All fields are mandatory.</span>
                 <button type="submit">Submit</button>
             </form>
         );
