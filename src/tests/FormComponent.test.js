@@ -1,6 +1,5 @@
 import {render, screen} from "@testing-library/react";
 import FormComponent from "../components/FormComponent";
-import NameList from "../components/NameList";
 
 // Navigate here to see a list of HTML elements and the corresponding roles for the getByRole method: https://www.w3.org/TR/html-aria/#docconformance
 
