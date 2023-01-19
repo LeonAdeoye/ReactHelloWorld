@@ -25,7 +25,7 @@ describe("HookCounterAdvanced", () =>
         expect(headerElement).toBeInTheDocument();
     })
 
-    test("renders count:1 after clicking the increment button", async () =>
+    test("renders count:1 after clicking on the increment button", async () =>
     {
         render(<HookCounterAdvanced/>);
         user.setup();
@@ -39,7 +39,7 @@ describe("HookCounterAdvanced", () =>
         expect(headerElement).toBeInTheDocument();
     })
 
-    test("resets to count:0 after clicking the reset button", async () =>
+    test("resets to count:0 after clicking on the reset button", async () =>
     {
         render(<HookCounterAdvanced/>);
         user.setup();
@@ -61,7 +61,7 @@ describe("HookCounterAdvanced", () =>
         expect(resetHeaderElement).toBeInTheDocument();
     })
 
-    test("decrements to count:0 after clicking the decrement button", async () =>
+    test("decrements to count:0 after clicking on the decrement button", async () =>
     {
         render(<HookCounterAdvanced/>);
         user.setup();
