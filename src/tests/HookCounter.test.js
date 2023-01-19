@@ -2,9 +2,9 @@ import {render, screen} from "@testing-library/react";
 import HookCounter from "../components/HookCounter";
 import user from '@testing-library/user-event'
 
-describe("Renders correctly", () =>
+describe("HookCounter", () =>
 {
-    test("HookCounter", () =>
+    test("renders correctly", () =>
     {
         render(<HookCounter/>);
         const buttonElement = screen.getByRole("button", {
@@ -12,11 +12,8 @@ describe("Renders correctly", () =>
         });
         expect(buttonElement).toBeInTheDocument();
     })
-})
 
-describe("Renders count:1 after clicking the button",  () =>
-{
-    test("HookCounter", async () =>
+    test("renders count:1 after clicking on the button", async () =>
     {
         render(<HookCounter/>);
         user.setup();

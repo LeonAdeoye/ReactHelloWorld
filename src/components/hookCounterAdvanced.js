@@ -6,7 +6,7 @@ function HookCounterAdvanced(props)
     const [count, setCount] = useState(0)
     return (
         <div>
-            Count: {count}
+            <h3>Count: {count}</h3>
             <button onClick={() => setCount(initialCount)}>Reset</button>
             <button onClick={() => setCount(prevCount  => prevCount + 1)}>Increment</button>
             <button onClick={() => setCount(prevCount  => prevCount - 1)}>Decrement</button>
