@@ -22,7 +22,7 @@ class CounterWithDiffEventHandlerBindings extends  Component
             count: previousState.count + 1
         }), () =>
         {
-            console.log("In the setState callback the state is now: " + this.state.count);
+            //console.log("In the setState callback the state is now: " + this.state.count);
         });
     }
 

@@ -1,9 +1,9 @@
 import {render, screen} from "@testing-library/react";
 import Message from "../components/Message";
 
-describe("Renders correctly", () =>
+describe("Message", () =>
 {
-    test("Message", () =>
+    test("renders correctly", () =>
     {
         // queryBy class of queries return null if not found rather than throw an exception.
         // You can use them to assert if an element is not in the DOM.

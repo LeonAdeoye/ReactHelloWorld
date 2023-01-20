@@ -1,9 +1,9 @@
 import {render, screen} from "@testing-library/react";
 import NameList from "../components/NameList";
 
-describe("Renders correctly", () =>
+describe("NameList", () =>
 {
-    test("NameList", () =>
+    test("renders correctly", () =>
     {
         render(<NameList/>);
         const listItems = screen.getAllByRole("listitem");

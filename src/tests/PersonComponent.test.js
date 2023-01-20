@@ -1,9 +1,9 @@
 import {render, screen} from "@testing-library/react";
 import PersonComponent from "../components/PersonComponent";
 
-describe("Renders correctly", () =>
+describe("PersonComponent", () =>
 {
-    test("PersonComponent", () =>
+    test("renders correctly", () =>
     {
         const person = {
             id: 1,
