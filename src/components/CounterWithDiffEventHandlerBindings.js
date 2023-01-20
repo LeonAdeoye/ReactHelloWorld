@@ -56,7 +56,7 @@ class CounterWithDiffEventHandlerBindings extends  Component
         // The forth approach is syntactically a relatively new approach but is also efficient.
         return (
             <div>
-                Count = {this.state.count}
+                <h4>Count = {this.state.count}</h4>
                 <button onClick={() => this.increment()}>Increment</button>
                 <button onClick={this.incrementByFive.bind(this)}>IncrementByFive</button>
                 <button onClick={this.incrementBy100}>IncrementBy100</button>
