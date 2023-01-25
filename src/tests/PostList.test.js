@@ -9,4 +9,11 @@ describe("PostList", () =>
         const posts = await screen.findAllByRole("heading");
         expect(posts).toHaveLength(2);
     })
+
+    test("handles error correctly", async () =>
+    {
+        render(<PostList/>);
+        const posts = await screen.findAllByRole("heading");
+        expect(posts).toHaveLength(2);
+    })
 })
