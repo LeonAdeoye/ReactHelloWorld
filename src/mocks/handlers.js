@@ -15,6 +15,16 @@ export const handlers = [
             }])
         )
     }),
+    rest.get(`https://jsonplaceholder.typicode.com/posts/1`, (req, res, ctx) =>
+    {
+        return res(
+            ctx.status(200),
+            ctx.json({
+                id: 1,
+                title: "Horatio is 10 years old."
+            })
+        )
+    }),
     rest.post('https://jsonplaceholder.typicode.com/posts', (req, res, ctx) =>
     {
         return res(

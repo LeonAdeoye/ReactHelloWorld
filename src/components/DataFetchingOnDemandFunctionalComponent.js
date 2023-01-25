@@ -12,7 +12,7 @@ function DataFetchingOnDemandFunctionalComponent()
         axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
             .then(result =>
             {
-                setPost(result.data)
+                setPost(result.data);
             })
             .catch(err =>
             {
@@ -21,7 +21,7 @@ function DataFetchingOnDemandFunctionalComponent()
     }, [idFromButtonClick]) // empty dependency array is used so that the axios get method is called only once.
     return (
         <div>
-            <input type="text" value={id} onChange={event => setId(parseInt(event.target.value)) } />
+            <input type="text" aria-label="postId" value={id} onChange={event => setId(parseInt(event.target.value)) } />
             <button onClick={() => setIdFromButtonClick(id)}>Get Post</button>
             <h2>{post.title}</h2>
         </div>
