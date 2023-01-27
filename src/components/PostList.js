@@ -21,7 +21,6 @@ class PostList extends Component
                 this.setState({posts: response.data})
             })
             .catch(error => {
-                console.error(error)
                 this.setState({errorMessage: 'Error retrieving data!'})
             })
     }
@@ -32,7 +31,7 @@ class PostList extends Component
         return (
             <div>
                 {posts.length ? posts.slice(0, 5).map(post => <h6 key={post.id}> {post.title}</h6>) : null}
-                {errorMessage ? <div>{errorMessage}</div> : null}
+                {errorMessage ? <h4>{errorMessage}</h4> : null}
             </div>
         )
     }
