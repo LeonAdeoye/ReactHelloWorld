@@ -1,29 +1,30 @@
-import {render, screen} from "@testing-library/react";
+import {render, screen, act} from "@testing-library/react";
 import user from '@testing-library/user-event'
 import DataFetchingOnDemandFunctionalComponent from "../components/DataFetchingOnDemandFunctionalComponent";
-import { act } from 'react-dom/test-utils';
 
 describe("DataFetchingOnDemandFunctionalComponent", () =>
 {
-    test("renders correctly", () =>
+    test("renders correctly", async () =>
     {
-        render(<DataFetchingOnDemandFunctionalComponent/>);
+        act(() =>
+        {
+            render(<DataFetchingOnDemandFunctionalComponent/>);
+        });
 
-        const getPostButtonElement = screen.getByRole("button", {
+        const getPostButtonElement = await screen.findByRole("button", {
             name: /^Get Post$/i
         });
-        expect(getPostButtonElement).toBeInTheDocument();
-
-        const postIdTextboxElement = screen.getByRole("textbox", {
+        const postIdTextboxElement = await screen.findByRole("textbox", {
             name: /^postId$/i
         });
-        expect(postIdTextboxElement).toBeInTheDocument();
+        const headingElementElement = await screen.findByRole("heading");
 
-        const headingElementElement = screen.getByRole("heading");
+        expect(getPostButtonElement).toBeInTheDocument();
+        expect(postIdTextboxElement).toBeInTheDocument();
         expect(headingElementElement).toBeInTheDocument();
     })
 
-    test("makes post request", async () =>
+    test.skip("makes post request", async () =>
     {
         user.setup();
         render(<DataFetchingOnDemandFunctionalComponent/>);

@@ -12,7 +12,7 @@ function DataFetchingFunctionalComponent(props)
             })
             .catch(err =>
             {
-                console.log(err)
+                console.error(err)
             })
     }, []) // empty dependency array is used so that the axios get method is called only once.
     return (

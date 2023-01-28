@@ -18,7 +18,7 @@ function DataFetchingOnDemandFunctionalComponent()
             {
                 console.log(err)
             })
-    }, [idFromButtonClick]) // empty dependency array is used so that the axios get method is called only once.
+    }, [idFromButtonClick])
     return (
         <div>
             <input type="text" aria-label="postId" value={id} onChange={event => setId(parseInt(event.target.value)) } />
