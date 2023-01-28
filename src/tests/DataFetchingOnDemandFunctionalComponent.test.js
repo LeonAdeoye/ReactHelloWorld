@@ -6,14 +6,12 @@ describe("DataFetchingOnDemandFunctionalComponent", () =>
 {
     test("renders correctly", async () =>
     {
-        act(() =>
-        {
-            render(<DataFetchingOnDemandFunctionalComponent/>);
-        });
+        await act(() => render(<DataFetchingOnDemandFunctionalComponent/>));
 
         const getPostButtonElement = await screen.findByRole("button", {
             name: /^Get Post$/i
         });
+
         const postIdTextboxElement = await screen.findByRole("textbox", {
             name: /^postId$/i
         });
@@ -24,10 +22,11 @@ describe("DataFetchingOnDemandFunctionalComponent", () =>
         expect(headingElementElement).toBeInTheDocument();
     })
 
-    test.skip("makes post request", async () =>
+    test("makes post request", async () =>
     {
         user.setup();
-        render(<DataFetchingOnDemandFunctionalComponent/>);
+        await act(() => render(<DataFetchingOnDemandFunctionalComponent/>));
+
         const getPostButtonElement = screen.getByRole("button", {
             name: /^Get Post$/i
         });
@@ -36,7 +35,8 @@ describe("DataFetchingOnDemandFunctionalComponent", () =>
             name: /^postId$/i
         });
 
-        await user.type(postIdTextboxElement, "1");
+        await user.clear(postIdTextboxElement)
+        await user.type(postIdTextboxElement, "1")
         await user.click(getPostButtonElement)
 
         const headingElementElement = screen.getByText("Horatio is 10 years old.");
