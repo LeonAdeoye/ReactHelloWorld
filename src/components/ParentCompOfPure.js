@@ -22,7 +22,7 @@ class ParentCompOfPure extends Component
 
     render()
     {
-        console.log("**************Parent Component Render*****************")
+        //TODO console.log("**************Parent Component Render*****************")
         return (
             <div>
                 <h2>Parent Component</h2>
