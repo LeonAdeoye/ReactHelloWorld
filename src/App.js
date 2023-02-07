@@ -45,6 +45,7 @@ import IntervalHookCounter from "./components/IntervalHookCounter";
 import DataFetchingFunctionalComponent from "./components/DataFetchingFunctionalComponent";
 import DataFetchingOnDemandFunctionalComponent from "./components/DataFetchingOnDemandFunctionalComponent";
 import MuiButton from "./components/buttons";
+import MuiTextField from "./components/textField";
 
 // CSS Module style sheets only apply to parent and do not pass on CSS styles to children.
 // They are locally scoped by default, and can avoid CSS conflicts.
@@ -52,6 +53,7 @@ function App()
 {
   return (
       <div className="App">
+        <MuiTextField/>
         <MuiButton/>
         <DataFetchingOnDemandFunctionalComponent/>
         <DataFetchingFunctionalComponent/>
