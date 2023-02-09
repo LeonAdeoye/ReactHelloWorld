@@ -47,6 +47,7 @@ import DataFetchingOnDemandFunctionalComponent from "./components/DataFetchingOn
 import MuiButton from "./components/MuiButton";
 import MuiTextField from "./components/MuiTextField";
 import MuiSelect from "./components/MuiSelect";
+import MuiSwitch from "./components/MuiSwitch";
 
 // CSS Module style sheets only apply to parent and do not pass on CSS styles to children.
 // They are locally scoped by default, and can avoid CSS conflicts.
@@ -57,6 +58,7 @@ function App()
         <MuiTextField/>
         <MuiButton/>
         <MuiSelect/>
+        <MuiSwitch/>
         <DataFetchingOnDemandFunctionalComponent/>
         <DataFetchingFunctionalComponent/>
         <IntervalHookCounter/>
