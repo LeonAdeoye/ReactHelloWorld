@@ -58,11 +58,12 @@ function App()
   return (
       <div className="App">
         <MuiBox/>
+        <MuiStack/>
         <MuiTextField/>
         <MuiButton/>
         <MuiSelect/>
         <MuiSwitch/>
-        <MuiStack/>
+
         <DataFetchingOnDemandFunctionalComponent/>
         <DataFetchingFunctionalComponent/>
         <IntervalHookCounter/>
