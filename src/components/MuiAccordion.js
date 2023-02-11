@@ -1,7 +1,8 @@
 import React from 'react';
 import {Stack} from '@mui/material'
 
-function MuiAccordion(props) {
+function MuiAccordion()
+{
     return (
         <Stack>
 
