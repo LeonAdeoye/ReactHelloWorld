@@ -7,7 +7,7 @@ const MuiSwitch = () =>
 
     const handleChange = (event) =>
     {
-        //setChecked(event.target.value == 'true');
+        setChecked(event.target.checked);
     }
 
     console.log(checked);

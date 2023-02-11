@@ -48,6 +48,8 @@ import MuiButton from "./components/MuiButton";
 import MuiTextField from "./components/MuiTextField";
 import MuiSelect from "./components/MuiSelect";
 import MuiSwitch from "./components/MuiSwitch";
+import MuiBox from "./components/MuiBox";
+import MuiStack from "./components/MuiStack";
 
 // CSS Module style sheets only apply to parent and do not pass on CSS styles to children.
 // They are locally scoped by default, and can avoid CSS conflicts.
@@ -55,10 +57,12 @@ function App()
 {
   return (
       <div className="App">
+        <MuiBox/>
         <MuiTextField/>
         <MuiButton/>
         <MuiSelect/>
         <MuiSwitch/>
+        <MuiStack/>
         <DataFetchingOnDemandFunctionalComponent/>
         <DataFetchingFunctionalComponent/>
         <IntervalHookCounter/>
