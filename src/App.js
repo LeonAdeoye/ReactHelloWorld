@@ -53,6 +53,7 @@ import MuiStack from "./components/MuiStack";
 import MuiAutocomplete from "./components/MuiAutocomplete";
 import MuiGrid from "./components/MuiGrid";
 import MuiAccordion from "./components/MuiAccordion";
+import MuiNavBarWithMenu from "./components/MuiNavBarWithMenu";
 
 // CSS Module style sheets only apply to parent and do not pass on CSS styles to children.
 // They are locally scoped by default, and can avoid CSS conflicts.
@@ -60,6 +61,7 @@ function App()
 {
   return (
       <div className="App">
+        <MuiNavBarWithMenu/>
         <MuiAccordion/>
         <MuiGrid/>
         <MuiBox/>
