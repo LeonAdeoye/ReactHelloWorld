@@ -56,6 +56,7 @@ import MuiAccordion from "./components/MuiAccordion";
 import MuiNavBarWithMenu from "./components/MuiNavBarWithMenu";
 import MuiList from "./components/MuiList";
 import MuiTable from "./components/MuiTable";
+import MuiDialog from "./components/MuiDialog";
 
 // CSS Module style sheets only apply to parent and do not pass on CSS styles to children.
 // They are locally scoped by default, and can avoid CSS conflicts.
@@ -63,6 +64,7 @@ function App()
 {
   return (
       <div className="App">
+        <MuiDialog/>
         <MuiNavBarWithMenu/>
         <MuiList/>
         <MuiTable/>
