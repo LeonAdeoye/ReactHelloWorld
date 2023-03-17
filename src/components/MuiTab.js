@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Box, Tab} from '@mui/material'
 import {TabContext, TabList, TabPanel} from '@mui/lab'
+import FavoriteIcon from '@mui/icons-material/Favorite'
 
 function MuiTab()
 {
@@ -13,10 +14,11 @@ function MuiTab()
         <Box>
             <TabContext value={tabValue}>
                 <Box sx={{ borderBottom: 1, borderColor: 'divider'}}>
-                    <TabList aria-label='Tabs Example' onChange={handleChange}>
-                        <Tab label='Tab One' value='1'></Tab>
-                        <Tab label='Tab Two' value='2'></Tab>
-                        <Tab label='Tab Three' value='3'></Tab>
+                    <TabList aria-label='Tabs Example' centred onChange={handleChange} textColor='secondary' indicatorColor='secondary'>
+                        <Tab label='Tab One' value='1' icon={<FavoriteIcon/>} iconPosition='start'></Tab>
+                        <Tab label='Tab Two' value='2' icon={<FavoriteIcon/>}></Tab>
+                        <Tab label='Tab Three' value='3' icon={<FavoriteIcon/>} iconPosition='bottom'></Tab>
+                        <Tab label='Tab Four Disabled' disabled value='4'></Tab>
                     </TabList>
                 </Box>
                 <TabPanel value='1'>Panel One</TabPanel>
