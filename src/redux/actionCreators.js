@@ -1,4 +1,7 @@
 import {BUY_CAKE, BUY_ICE_CREAM} from "./actionTypes";
+import {reduxLogger} from "redux-logger";
+
+export const logger = reduxLogger.createLogger();
 
 // An action creator returns an action.
 export const buyCake = () =>
