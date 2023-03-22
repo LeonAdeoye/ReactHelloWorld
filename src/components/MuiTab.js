@@ -14,7 +14,7 @@ function MuiTab()
         <Box>
             <TabContext value={tabValue}>
                 <Box sx={{ borderBottom: 1, borderColor: 'divider'}}>
-                    <TabList aria-label='Tabs Example' centred onChange={handleChange} textColor='secondary' indicatorColor='secondary'>
+                    <TabList aria-label='Tabs Example' centered onChange={handleChange} textColor='secondary' indicatorColor='secondary'>
                         <Tab label='Tab One' value='1' icon={<FavoriteIcon/>} iconPosition='start'></Tab>
                         <Tab label='Tab Two' value='2' icon={<FavoriteIcon/>}></Tab>
                         <Tab label='Tab Three' value='3' icon={<FavoriteIcon/>} iconPosition='bottom'></Tab>
