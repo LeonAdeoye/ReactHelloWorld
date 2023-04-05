@@ -58,6 +58,7 @@ import MuiList from "./components/MuiList";
 import MuiTable from "./components/MuiTable";
 import MuiDialog from "./components/MuiDialog";
 import MuiTab from "./components/MuiTab";
+import ColorfulBox from "./components/ColorfulBox";
 
 // CSS Module style sheets only apply to parent and do not pass on CSS styles to children.
 // They are locally scoped by default, and can avoid CSS conflicts.
@@ -65,6 +66,7 @@ function App()
 {
   return (
       <div className="App">
+            <ColorfulBox/>
         <MuiTab/>
         <MuiDialog/>
         <MuiNavBarWithMenu/>
