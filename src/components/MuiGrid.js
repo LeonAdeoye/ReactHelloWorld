@@ -8,7 +8,7 @@ function MuiGrid()
     // There are 5 device sizes (breakpoints) which can be combined together for different devices: xs for mobile devices, sm for tablets, md for desktop, lg and xl for larger monitors.
     // We can assign integer values to each of the device sizes which indicates how many of the 12 available columns are occupied by that item
     return (
-        <Grid container my={4} rowSpacing={1} columnSpacing={3}>
+        <Grid container my={0} rowSpacing={0} columnSpacing={4}>
             <Grid item xs={3} sm={1}>
                 <Box bgcolor='primary.light' p={2}>Item 1</Box>
             </Grid>

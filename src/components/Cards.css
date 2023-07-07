@@ -1,0 +1,61 @@
+/*BASIC */
+.cut-off2
+{
+    --max-lines: 3;
+    display: -webkit-box;
+    -webkit-line-clamp: var(--max-lines);
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+}
+
+/*ADVANCED*/
+.cut-off
+{
+    --max-lines: 8;
+    --line-height: 1.4;
+    height: calc(var(--line-height) * var(--max-lines) * 1em);
+    line-height: var(--line-height);
+    overflow: hidden;
+    position: relative;
+}
+
+.cut-off:has(+ .expand-btn:not(:checked))::before
+{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: calc(1em * var(--line-height));
+    pointer-events: none;
+    background: linear-gradient(to bottom, transparent, white);
+}
+.expand-btn
+{
+    appearance: none;
+    border: 1px solid red;
+    padding: .5em;
+    border-radius: .25em;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.expand-btn:hover
+{
+    background: red;
+    color: white;
+}
+
+.expand-btn::before
+{
+    content: "Expand";
+}
+
+.expand-btn:checked::before
+{
+    content: "Collapse";
+}
+
+.cutoff:has(+ .expand-btn:checked)
+{
+    max-height: none;
+}

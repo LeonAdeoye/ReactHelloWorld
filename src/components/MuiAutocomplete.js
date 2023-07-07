@@ -5,11 +5,8 @@ function MuiAutocomplete()
 {
     const skills = ['HTML', 'CSS', 'JavaScript', 'Typescript', 'React', 'Angular', 'Blazor', 'Python', 'Java'];
     const peopleSkills = skills.map((skill, index) => ({id: index+1, label: skill}));
-    console.log(peopleSkills);
     const [skill, setSkill]  = useState('React');
     const [personSkill, setPersonSkill]  = useState(null);
-    console.log(skill);
-    console.log(personSkill);
     return (
         <>
             <Stack  spacing={2} width='250px' m={1}>

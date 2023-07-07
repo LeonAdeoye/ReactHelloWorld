@@ -1,0 +1,36 @@
+.parent
+{
+    background-color: yellow;
+    height: 1020px;
+    width: 400px;
+    padding: 10px;
+    margin-top: 10px;
+    /* The parent element is position: static by default which positions child elements relative to the browser window. */
+    position: relative; /* We set the position to relative because we want to position the child elements relative to the parent element.*/
+}
+
+.child
+{
+    height: 200px;
+}
+
+.child-one
+{
+    background-color: red;
+    position: absolute;
+    top:0px;
+}
+
+.child-two
+{
+    background-color: blue;
+    position: fixed; /* The child element will stay in the same position even if the page is scrolled. */
+    right: 0px;
+}
+
+.child-three
+{
+    background-color: green;
+    position: relative;
+    left: 60px;
+}

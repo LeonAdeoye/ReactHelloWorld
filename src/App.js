@@ -59,14 +59,19 @@ import MuiTable from "./components/MuiTable";
 import MuiDialog from "./components/MuiDialog";
 import MuiTab from "./components/MuiTab";
 import ColorfulBox from "./components/ColorfulBox";
+import Cards from "./components/Cards";
+import CSSPosition from "./components/CSSPosition";
 
 // CSS Module style sheets only apply to parent and do not pass on CSS styles to children.
 // They are locally scoped by default, and can avoid CSS conflicts.
 function App()
 {
   return (
+
       <div className="App">
-            <ColorfulBox/>
+          <CSSPosition/>
+{/*        <Cards/>
+        <ColorfulBox/>
         <MuiTab/>
         <MuiDialog/>
         <MuiNavBarWithMenu/>
@@ -131,7 +136,7 @@ function App()
         </GreetWithChild>
         <Message/>
         <GreetWithDestructor name="Bruce Wayne" heroName = "Batman"/>
-        <CounterWithDiffEventHandlerBindings/>
+        <CounterWithDiffEventHandlerBindings/>*/}
       </div>
   );
 }
